@@ -23,7 +23,7 @@ const uploadAlbum = asyncHandler(async (req, res) => {
 });
 
 const updateAlbum = asyncHandler(async (req, res) => {
-  const album = await Latest.findById(req.params.id);
+  const album = await Album.findById(req.params.id);
 
   if (!album) {
     res.status(400);
@@ -38,14 +38,14 @@ const updateAlbum = asyncHandler(async (req, res) => {
 });
 
 const deleteAlbum = asyncHandler(async (req, res) => {
-  const latest = await Latest.findById(req.params.id);
+  const album = await Album.findById(req.params.id);
 
-  if (!latest) {
+  if (!album) {
     res.status(400);
-    throw new Error("Latest text not found");
+    throw new Error("Album not found");
   }
 
-  await latest.deleteOne();
+  await album.deleteOne();
 
   res.status(200).json({ id: req.params.id });
 });
