@@ -57,7 +57,7 @@ const Latest = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <div>
-        <label htmlFor="text">Upload Latest page Texts:</label>
+        <label htmlFor="text">Input Latest Album Name:</label>
         <br />
           <textarea
             type="text"

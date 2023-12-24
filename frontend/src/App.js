@@ -10,8 +10,9 @@ import { Link, Outlet } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <h1>Upload files</h1>
-      <Link to="Home">Home</Link> | <Link to="Latest">Latest</Link>
+      <h1>AvoidRafa Admin Panel File Uploader</h1>
+      <Link to="Home">Home</Link> | <Link to="Latest">Latest</Link> |
+      <Link to="Album">Album</Link> | <Link to="Gallery">Gallery</Link> 
     <br />
     <br />
     <Outlet />

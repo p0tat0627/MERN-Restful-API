@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import Home from './components/Home.jsx';
 import Latest from './components/Latest';
+import Album from './components/Album.jsx';
+import Gallery from './components/Gallery.jsx';
 import reportWebVitals from './reportWebVitals';
 
 import {
@@ -18,6 +20,8 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route path="Home" element={<Home />} />
       <Route path="Latest" element={<Latest />}/>
+      <Route path="Album" element={<Album />}/>
+      <Route path="Gallery" element={<Gallery />}/>
     </Route>
   )
 );

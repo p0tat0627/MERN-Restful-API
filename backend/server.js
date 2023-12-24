@@ -19,7 +19,8 @@ app.use(cors({origin: 'http://localhost:3000'}))
 // app.use('/api/latest', require('./routes/latestRoutes'));
 app.use('/api/home', require('./routes/homeRoutes'));
 app.use('/api/latest', require('./routes/latestRoutes'));
-
+app.use('/api/album', require('./routes/albumRoutes'));
+app.use('/api/gallery', require('./routes/galleryRoutes'));
 
 app.use(errorHandler);
 
