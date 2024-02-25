@@ -55,6 +55,9 @@ const Latest = () => {
 
   return (
     <div>
+      <div>
+      <h4>Latest Release (Album name & Album Image)</h4>
+      </div>
       <form onSubmit={handleSubmit}>
         <div>
         <label htmlFor="text">Input Latest Album Name:</label>
@@ -68,7 +71,7 @@ const Latest = () => {
           />
         </div>
         <div>
-          <label htmlFor="img">Upload Latest page Image:</label>
+          <label htmlFor="img">Upload Latest Album Image:</label>
           <br />
           <input
             type="file"

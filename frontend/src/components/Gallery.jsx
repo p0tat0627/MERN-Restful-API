@@ -6,7 +6,6 @@ const AudioUpload = () => {
   const [imageFiles, setImageFiles] = useState([]);
   const [loading, setLoading] = useState(false);
 
-
   // cloudinary REST API upload
   const uploadToCloudinary = async (file, resourceType) => {
     const data = new FormData();
@@ -27,7 +26,10 @@ const AudioUpload = () => {
       const secureUrl = res.data.secure_url;
       return secureUrl;
     } catch (error) {
-      console.error("Error uploading file:", error.response ? error.response.data : error.message);
+      console.error(
+        "Error uploading file:",
+        error.response ? error.response.data : error.message
+      );
       return null;
     }
   };
@@ -39,8 +41,6 @@ const AudioUpload = () => {
     console.log("All the Images:", filesArray);
     setImageFiles(filesArray);
   };
-
-  
 
   // post urls to database
   const handleSubmit = async (e) => {
@@ -62,7 +62,10 @@ const AudioUpload = () => {
 
       console.log("Data sent to the server successfully!");
     } catch (error) {
-      console.error("Error uploading files:", error.response ? error.response.data : error.message);
+      console.error(
+        "Error uploading files:",
+        error.response ? error.response.data : error.message
+      );
     } finally {
       setLoading(false);
     }
@@ -70,9 +73,14 @@ const AudioUpload = () => {
 
   return (
     <div>
+      <div>
+        <h4>Gallery (All gallery Images)</h4>
+      </div>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="image">Upload Gallery Images (Select all gallery images at once) </label>
+          <label htmlFor="image">
+            Upload Gallery Images (Select all gallery images at once){" "}
+          </label>
           <br />
           <input
             type="file"
@@ -82,7 +90,7 @@ const AudioUpload = () => {
             onChange={handleImageChange}
           />
         </div>
-        
+
         <br />
         <button type="submit">Upload Files</button>
       </form>
